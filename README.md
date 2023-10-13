@@ -1,8 +1,9 @@
 Setting up EAS Build allows you to build ready-to-submit binary of your app for the Google Play Store or Apple Store. (i.e. .apk/.aab files for Android, and .ipa file iOS).
 
-1. Install `eas-cli` as a global package
+1. Install package dependencies, then install `eas-cli` as a global package
 
     ```
+    npm install
     npm install -g eas-cli
     ```
 
