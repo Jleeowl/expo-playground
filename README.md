@@ -7,7 +7,9 @@ This is a sample project using Expo Pedometer. Note that you cannot run this pro
     npx expo install expo-sensors
     ```
 
+
 2. There is a known issue on Android with causes this package to not work properly as discussed in the following [git issues - discussion](https://github.com/expo/expo/issues/16605). The crux of the problem is that the `expo-sensors` package `Pedometer.requestPermissionsAsync()` function seems to always return `{ granted: true, ... }` and does not request for the required permissions properly. To resolve this issue, we need a workaround.
+
 
 3. Create a plugin file anywhere in your project directory and paste the following code snippet.
     ```
@@ -37,6 +39,7 @@ This is a sample project using Expo Pedometer. Note that you cannot run this pro
     };
     ```
 
+
 4. Make a change by adding following code snippet into your project `app.json` | `app.config.js` file
     ```
     expo: {
@@ -46,6 +49,7 @@ This is a sample project using Expo Pedometer. Note that you cannot run this pro
         ...
     }
     ```
+
 
 5. Copy and paste the following sample code to your `App.js`
 
@@ -100,6 +104,8 @@ This is a sample project using Expo Pedometer. Note that you cannot run this pro
         },
     });
     ```
+
+    
 6. To run tests, you will need to prebuild the project and run it on an actual device.
 
     ```
