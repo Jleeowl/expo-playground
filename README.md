@@ -8,7 +8,7 @@ This is a sample project using Expo Pedometer. Note that you cannot run this pro
     ```
 
 
-2. There is a known issue on Android which causes this package to not work properly ( for more details visit the following [link](https://github.com/expo/expo/issues/16605). The crux of the problem is that the `expo-sensors` package `Pedometer.requestPermissionsAsync()` function seems to always return `{ granted: true, ... }` and does not request for the required permissions properly. To resolve this issue, we need a workaround.
+2. There is a known issue on Android which causes this package to not work properly ( for more details visit the following [link](https://github.com/expo/expo/issues/16605). The crux of the problem is that the required `android.permission.ACTIVITY_RECOGNITION` is not added to the AndroidManifest.xml, and the `expo-sensors` package `Pedometer.requestPermissionsAsync()` function seems to always return `{ granted: true, ... }` and does not request for the required permissions properly. To resolve this issue, we need a workaround.
 
 
 3. Create a plugin file anywhere in your project directory and paste the following code snippet.
