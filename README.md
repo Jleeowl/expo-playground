@@ -1,5 +1,5 @@
 # Expo Pedometer Project
-This is a sample project using Expo Pedometer. Note that you cannot run this project with `expo start`. Instead you will need use `expo prebuild` and `expo run`
+This is a sample project using Expo Pedometer. Note that you cannot run this project with `expo start`. Instead you will need use `expo prebuild` and `expo run` to test the app on an actual working device.
 
 1. Install the project dependencies, and then expo install the `expo-sensors` package.
     ```
